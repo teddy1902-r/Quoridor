@@ -67,6 +67,18 @@ body{min-height:100dvh}
   .actions{margin-top:3px;gap:3px}
   .btn{min-height:28px;padding:4px;font-size:.64rem}
 }
+
+/* Sur téléphone : affichage vertical et défilement libre pour éviter les éléments coupés. */
+html,body{overflow-y:auto}
+@media(max-width:820px){
+  .layout{grid-template-columns:1fr;gap:10px}
+  .side{height:max-content;overflow:visible}
+  .board{width:min(92vw,100%)}
+}
+@media(max-width:520px){
+  .app{min-height:100dvh}
+  .board{width:min(94vw,100%)}
+}
 </style>
 </head>
 <body>
